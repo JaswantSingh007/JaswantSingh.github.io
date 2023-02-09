@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Tooltip from "./Tooltip";
+import "./App.css";
 
-function App() {
+export default function App()
+{
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="main">
+        {/* right tooltip */}
+        <div className="main-tooltip">
+          <Tooltip content="Right Tooltip Content!" direction="right" delay="0">
+            <button>Right Tooltip</button>
+          </Tooltip>
+        </div>
+
+        {/* top tooltip */}
+        <div className="main-tooltip">
+          <Tooltip content="Top Tooltip Content!" direction="top" delay="0">
+            <button>Top Tooltip</button>
+          </Tooltip>
+        </div>
+
+
+        {/* bottom tooltip */}
+        <div className="main-tooltip">
+          <Tooltip content="Bottom Tooltip Content!" direction="bottom" delay="0">
+            <button>Bottom Tooltip</button>
+          </Tooltip>
+        </div>
+
+        {/* left tooltip */}
+        <div className="main-tooltip">
+          <Tooltip content="Left Tooltip Content" direction="left" delay="0">
+            <button>Left Tooltip</button>
+          </Tooltip>
+        </div>
+      </div>
     </div>
   );
 }
-
-export default App;
