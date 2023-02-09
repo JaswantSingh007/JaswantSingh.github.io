@@ -23,8 +23,7 @@ const Tooltip = (props) => {
       {active && (
         <div className={`tooltip-tip ${props.position || "top"}`}>
           {/* Content */}
-          {/* {props.content} */}
-          <p>Thanks for Hovering! I'm an Tooltip</p>
+          <p style={{}}>Thanks for Hovering! I'm an Tooltip</p>
         </div>
       )}
     </div>
